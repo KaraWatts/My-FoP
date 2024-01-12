@@ -12,3 +12,4 @@ p3 = Person("Beatrice", 48)
 person_list = [p1, p2, p3]
 answer = std_dev(person_list)
 
+Standard Deviation, σ: 20.005554784165
