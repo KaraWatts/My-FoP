@@ -1,6 +1,6 @@
-class InvalidSalesItemError(Exception):
-    pass
-
+from menu_item import MenuItem
+from sales_for_day import SalesForDay
+from invalid_sales_item_error import InvalidSalesItemError
     
 class LemonadeStand:
     
@@ -23,18 +23,11 @@ class LemonadeStand:
         return self._salesForDayList
     
     def add_menu_item(self, newMenuItem):
-        newMenuItemDictionary = {
-            newMenuItem._name: {
-            '_wholesaleCost': newMenuItem._wholesaleCost,
-            '_sellingPrice': newMenuItem._sellingPrice
-            }
-        }
-
-        self._menuItemDictionary.update(newMenuItemDictionary)
+        self._menuItemDictionary[newMenuItem.get_name()] = newMenuItem
 
     def enter_sales_for_today(self, salesOfDay):
             for key in salesOfDay:  
-                if key not in self._menuItemDictionary:
+                if key not in self._menuItemDictionary.keys():
                     raise InvalidSalesItemError("Item not on the menu")
             newSales = SalesForDay(self._currentDay, salesOfDay)
             self._salesForDayList.append(newSales)
@@ -66,17 +59,16 @@ class LemonadeStand:
             if menuItem not in self._menuItemDictionary:
                 raise InvalidSalesItemError("Item not on the menu")
             else: 
-                profitPerItem = self._menuItemDictionary[menuItem]["_sellingPrice"] - self._menuItemDictionary[menuItem]["_wholesaleCost"]
+                itemObj = self._menuItemDictionary[menuItem]
+                profitPerItem = itemObj.get_selling_price() - itemObj.get_wholesale_cost()
+
                 totalItemProfit = profitPerItem * self.total_sales_for_menu_item(menuItem)
                 return totalItemProfit
 
 
-        
-
-
     def total_profit_for_stand(self):
         totalStandProfit = 0
-        for key in self._menuItemDictionary:
+        for key in self._menuItemDictionary.keys():
             totalStandProfit += self.total_profit_for_menu_item(key)
         return totalStandProfit
 
