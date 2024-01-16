@@ -15,6 +15,7 @@ def file_sum(num_file):
     except FileNotFoundError:
         return 'File Not Found'
 
-    return total
+    with open('sum.txt', 'w') as outfile:
+            outfile.write(str(total) + '\n')
 
 print(file_sum("num.txt"))
