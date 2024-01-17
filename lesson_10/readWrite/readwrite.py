@@ -21,7 +21,7 @@ for index, name in enumerate(names):
 import json
 
 with open('names.json', 'w') as outfile:
-    json.dump(names_dictionary, outfile)
+    json.dump(names_dictionary, outfile, indent = 1)
 
 with open('names.json', 'r') as infile:
     print(json.load(infile))
