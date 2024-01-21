@@ -1,0 +1,72 @@
+body{
+    background-color: black;
+}
+h1 {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px
+}
+
+ h1 {
+   color: white;
+   justify-content: center;
+}
+
+ul {
+    display: flex;
+    color: white;
+    font-size: 25px;
+}
+
+ul {
+    justify-content: space-evenly;
+}
+
+#turnBlue {
+    border: 1px lightgrey solid;
+    background-color: lightskyblue;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#turnGreen {
+    border: 1px lightgrey solid;
+    background-color: green;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#turnRed {
+    border: 1px lightgrey solid;
+    background-color: red;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#turnYellow {
+    border: 1px lightgrey solid;
+    background-color: gold;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#turnOrange {
+    border: 1px lightgrey solid;
+    background-color: orange;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#turnRandom {
+    border: 1px lightgrey solid;
+    background-color: purple;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
