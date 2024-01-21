@@ -1,0 +1,11 @@
+.africa {
+    color: blue;
+}
+
+.harryPotter {
+    color: gold
+}
+
+body > .likesToQuack, .fight10r100{
+    color: green !important;
+}
