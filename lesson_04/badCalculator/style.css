@@ -1,31 +1,73 @@
 * {
     box-sizing: border-box;
 }
-
+body {
+    background-color: rgb(157, 183, 121);
+}
 h1,
 h2 {
     text-align: center;
 
 }
 
-img {
-    display: block;
-    height: 300px;
-    margin: 0 auto;
+.container{
+    display:flex;
+    flex-flow: row wrap ;
+    justify-content: center;
+    justify-content: space-evenly;
+
 }
 
-ul {
-    width: 100px;
-    height: 200px;
-    border: 3px solid black;
-    margin: 0 auto;
+
+.container {
+    background-color: rgb(143, 202, 228);
+    width: 490px;
+    height: 510px;
+    margin: auto;
     list-style: none;
     padding: 0;
+    border-radius: 5px;
+
 }
 
-li {
+.numbers {
+    background-color: rgb(237, 237, 237);
+    font-size: 25px;
     text-align: center;
-    width: 94px;
-    height: 49px;
-    border: 1px solid black;
+    padding-top: 30px;
+    width: 100px;
+    height: 90px;
+    box-shadow: 0px 3.5px 1px rgb(147, 145, 145);
 }
+
+.clear{
+    background-color: rgb(255, 146, 160);
+    font-size: 25px;
+    text-align: center;
+    padding-top: 30px;
+    width: 100px;
+    height: 90px;
+    box-shadow: 0px 3.5px 1px rgb(147, 145, 145);
+}
+
+.operators{
+    background-color: rgb(237, 255, 148);
+    font-size: 25px;
+    text-align: center;
+    padding-top: 30px;
+    width: 100px;
+    height: 90px;
+    box-shadow: 0px 3.5px 1px rgb(147, 145, 145);
+}
+
+.answer{
+    background-color: rgb(237, 237, 237);
+    font-size: 25px;
+    text-align: right;
+    padding-right:10px;
+    padding-top: 30px;
+    width: 450px;
+    height: 90px;
+    margin-top: 10px;
+    box-shadow: 0px 3.5px 1px rgb(147, 145, 145);
+    }
