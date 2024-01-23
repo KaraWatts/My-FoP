@@ -2,6 +2,13 @@
 # Exmaple:
 # Input: 'Errors should never pass silently. Unless explicitly silenced.'
 # Output: ['Errors', 'Unless', 'explicitly']
+import re
+
+string1 = 'Errors should never pass silently. Unless explicitly silenced.'
+regEx = r"\b[aeiouAEIOU]\S*"
+result = re.findall(regEx, string1)
+
+print(result)
 
 
 
