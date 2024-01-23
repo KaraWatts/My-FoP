@@ -148,7 +148,7 @@ def lessSpace(str):
 # Output: 'PythonExercises12'
 
 def removeNonAlphas(str):
-    regEx = r'[^\w\d]'
+    regEx = r'[\W]+'
     match = re.sub(regEx, '', str)
 
     return match
@@ -193,7 +193,7 @@ def onlyMoreThanThree(string_input):
     regEx = r'\b\s?[\w]{1,3}\b'
     match = re.sub(regEx, '', string_input)
 
-    return match
+    return match.lstrip()
 
 # print(onlyMoreThanThree('The quick brown fox jumps over the lazy dog.'))
 
