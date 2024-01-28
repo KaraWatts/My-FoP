@@ -2,18 +2,31 @@
 document.querySelector('#addButton').addEventListener('click', addTask)
 
 
-toDos = JSON.parse(localStorage.getItem('taskList'))
-console.log(toDos)
-toDos.push('doing')
+
+
+const taskList = document.querySelector('.container')
 
 function addTask() {
 
-    const newTask = document.querySelector('#taskInput').value
-    //store item in local storage
-    // console.log(localStorage['taskList'])
-    // list = ['what', 'am', 'i']
-    // localStorage.setItem('taskList', list)
-    //Create new list item
-    document.querySelector('.container').appendChild(document.createElement('li')).innerText = newTask
+    let newList = document.createElement('li')
+    let newTask = document.querySelector('#taskInput').value
 
+    
+    let deleteButton = document.createElement('button')
+    deleteButton.innerHTML = 'DELETE'
+    deleteButton.addEventListener('click', () => {
+        newListItem.remove()
+    })
+    
+    let checkOffButton = document.createElement('input')
+    checkOffButton.setAttribute('type', 'checkbox')
+    checkOffButton.addEventListener('click', () => {
+        checkOffButton.checked ? newList.style.textDecorationLine = 'line-through' : newList.style.textDecorationLine = 'none'
+    })
+    
+    newList.appendChild(checkOffButton)
+    newList.appendChild(document.createTextNode(newTask))
+    newList.appendChild(deleteButton)    
+    taskList.appendChild(newList)
+    
 }
